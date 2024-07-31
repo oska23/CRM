@@ -52,7 +52,7 @@ const Complaints = () => {
     const fetchComplaints = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:3001/api/complaints"
+          "https://container-service-3.08h3clado6ibk.eu-central-1.cs.amazonlightsail.com/api/complaints"
         );
         // Sort complaints by newest first (descending order)
         const sortedComplaints = data.sort(
