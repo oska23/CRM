@@ -35,7 +35,7 @@ const AddCustomer = () => {
 
   const fetchDepartments = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/api/departments");
+      const response = await axios.get("https://container-service-3.08h3clado6ibk.eu-central-1.cs.amazonlightsail.com/api/departments");
       setDepartments(response.data);
     } catch (error) {
       setError("Error fetching departments.");
@@ -46,7 +46,7 @@ const AddCustomer = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3001/api/customers", {
+      const response = await axios.post("https://container-service-3.08h3clado6ibk.eu-central-1.cs.amazonlightsail.com/api/customers", {
         name,
         phone,
         district_id: districtId,
