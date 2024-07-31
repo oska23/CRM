@@ -25,7 +25,7 @@ const AddCustomer = () => {
 
   const fetchDistricts = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/api/districts");
+      const response = await axios.get("https://container-service-3.08h3clado6ibk.eu-central-1.cs.amazonlightsail.com/api/districts");
       setDistricts(response.data);
     } catch (error) {
       setError("Error fetching districts.");
