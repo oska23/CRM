@@ -119,7 +119,7 @@ const Complaints = () => {
 
   const handleUpdateStatus = async (complaintId) => {
     try {
-      await axios.put(`http://localhost:3001/api/complaints/${complaintId}`, {
+      await axios.put(`https://container-service-3.08h3clado6ibk.eu-central-1.cs.amazonlightsail.com/api/complaints/${complaintId}`, {
         status: "Resolved",
       });
       console.log(
