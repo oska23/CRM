@@ -31,7 +31,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:3001/api/signup",
+        "https://container-service-3.08h3clado6ibk.eu-central-1.cs.amazonlightsail.com/api/signup",
         formData
       );
       console.log("Signup successful:", response.data);
