@@ -49,7 +49,7 @@ const AddComplaint = () => {
 
     const fetchCustomers = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/api/customers");
+        const response = await axios.get("https://container-service-3.08h3clado6ibk.eu-central-1.cs.amazonlightsail.com/api/customers");
         setCustomers(response.data);
       } catch (error) {
         setError("Error fetching customers.");
