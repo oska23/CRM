@@ -29,7 +29,7 @@ const AddComplaint = () => {
   useEffect(() => {
     const fetchDistricts = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/api/districts");
+        const response = await axios.get("https://container-service-3.08h3clado6ibk.eu-central-1.cs.amazonlightsail.com/api/districts");
         setDistricts(response.data);
       } catch (error) {
         setError("Error fetching districts.");
@@ -39,7 +39,7 @@ const AddComplaint = () => {
     const fetchDepartments = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3001/api/departments"
+          "https://container-service-3.08h3clado6ibk.eu-central-1.cs.amazonlightsail.com/api/departments"
         );
         setDepartments(response.data);
       } catch (error) {
@@ -65,7 +65,7 @@ const AddComplaint = () => {
     event.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:3001/api/complaints",
+        "https://container-service-3.08h3clado6ibk.eu-central-1.cs.amazonlightsail.com/api/complaints",
         {
           subject,
           description,
