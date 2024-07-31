@@ -47,7 +47,7 @@ const Customers = () => {
   useEffect(() => {
     const fetchCustomers = async () => {
       try {
-        const { data } = await axios.get("http://localhost:3001/api/customers");
+        const { data } = await axios.get("https://container-service-3.08h3clado6ibk.eu-central-1.cs.amazonlightsail.com/api/customers");
         setCustomers(data);
       } catch (error) {
         setError("Error fetching customers.");
@@ -80,7 +80,7 @@ const Customers = () => {
   const handleDeleteCustomer = async () => {
     try {
       await axios.delete(
-        `http://localhost:3001/api/customers/${selectedCustomer.customer_id}`
+        `https://container-service-3.08h3clado6ibk.eu-central-1.cs.amazonlightsail.com/api/customers/${selectedCustomer.customer_id}`
       );
       setCustomers(
         customers.filter(
