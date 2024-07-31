@@ -34,7 +34,7 @@ const CustomerForm = () => {
 
   const fetchDistricts = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/districts");
+      const response = await axios.get("https://container-service-3.08h3clado6ibk.eu-central-1.cs.amazonlightsail.com/districts");
       setDistricts(response.data);
     } catch (error) {
       console.error("Error fetching districts:", error);
@@ -43,7 +43,7 @@ const CustomerForm = () => {
 
   const fetchDepartments = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/departments");
+      const response = await axios.get("https://container-service-3.08h3clado6ibk.eu-central-1.cs.amazonlightsail.com/departments");
       setDepartments(response.data);
     } catch (error) {
       console.error("Error fetching departments:", error);
@@ -52,7 +52,7 @@ const CustomerForm = () => {
 
   const fetchFormFilledByUsers = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/form_filled_by");
+      const response = await axios.get("https://container-service-3.08h3clado6ibk.eu-central-1.cs.amazonlightsail.com/form_filled_by");
       setFormFilledByUsers(response.data);
     } catch (error) {
       console.error("Error fetching form filled by users:", error);
@@ -67,7 +67,7 @@ const CustomerForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3000/customers", customer);
+      await axios.post("https://container-service-3.08h3clado6ibk.eu-central-1.cs.amazonlightsail.com/customers", customer);
       alert("Customer added successfully");
       history.push("/customers"); // Redirect to customer list after successful addition
     } catch (error) {
